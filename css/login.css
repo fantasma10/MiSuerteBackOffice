@@ -1,0 +1,96 @@
+/*Pagina Logeo, estos estilos son para esa página nada más.*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+.ingreso-body {
+background: #004d9c url(../img/login_back.png) top center no-repeat;
+height:320px;
+width:100%;
+position:relative;
+margin-top:12%;
+}
+.ingreso-body .mired-logo {
+background: none;
+text-align: center;
+padding-top: 60px;
+}
+.forma-ingreso {
+    max-width: 280px;
+    margin: 1px auto 0; 
+    border-radius: 12px;
+	}
+.forma-ingreso h2.forma-ingreso-cabecera {
+    /*margin: 0;
+    padding:20px 15px;
+    text-align: center;
+    background: #003366;
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;*/
+}
+.forma-ingreso .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.forma-ingreso .form-control:focus {
+    z-index: 2;
+}
+.forma-ingreso input[type="text"], .forma-ingreso input[type="password"] {
+    
+    margin-bottom: 15px;
+	color:#FFFFFF;
+	margin-top: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+    font-size: 12px;
+}
+.forma-ingreso .btn-login {
+    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-weight: 300;
+	font-size:12px;
+    font-family: 'Open Sans', sans-serif;
+	max-width: 56px;
+	min-height:76px;
+	float:right;
+	margin:auto;
+}
+.forma-ingreso p {
+    text-align: center;
+    color: #b6b6b6;
+    font-size: 16px;
+    font-weight: 300;
+}
+.forma-ingreso a {
+    color: #41cac0;
+}
+.forma-ingreso a:hover {
+    color: #b6b6b6;
+}
+.ingreso-wrap {
+    padding-top: 20px;
+}
+#ingreso-pie {
+background:#333333;
+width:100%;
+max-height: 30px;
+position:fixed;
+bottom: 0px;
+font-family: 'Open Sans', sans-serif;
+font-size: 11px;
+text-align: center;
+color:#FFFFFF;
+-moz-opacity: 0.60;
+opacity: 0.60;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=60);
+}

@@ -1,0 +1,52 @@
+<?php
+
+	/*error_reporting(E_ALL);
+	ini_set('display_errors', 2);
+*/
+	include($_SERVER['DOCUMENT_ROOT']."/inc/config.inc.php");
+	include($_SERVER['DOCUMENT_ROOT']."/inc/session.ajax.inc.php");
+
+	$idSucursal = (!empty($_POST['idSucursal']))? $_POST['idSucursal'] : 0;
+
+	if($idSucursal > 0){
+		$QUERY = "CALL `afiliacion`.`SPA_ALTA_SUCURSAL`($idSucursal, @resCode, @resMsg)";
+		$WBD->query($QUERY);
+		//echo "error ".$WBD->error();
+		if(!$WBD->error()){
+
+			$sql = $WBD->query("SELECT @resCode AS codigo, @resMsg AS msg;");
+
+			$res = mysqli_fetch_assoc($sql);
+			$codigo		= $res['codigo'];
+			$message	= $res['msg'];
+
+			$LOG->error("Crear Sucursal idSucursal => ".$idSucursal." Codigo => ".$codigo." Mensaje => ".$message);
+
+			$response = array(
+				"showMsg"		=> 1,
+				"success"		=> ($codigo == 0)? true : false,
+				"msg"			=> $codigo." : ".$message,
+				"codigo"		=> $codigo,
+				"res"			=> $res
+			);
+		}
+		else{
+			$response = array(
+				"showMsg"		=> 1,
+				"success"		=> false,
+				"msg"			=> 'Error',
+				"res"			=> $WBD->error()
+			);
+		}
+	}
+	else{
+		//$LOG->error("No se puede crear Sucursal ".$idSucursal);
+		$response = array(
+			'success'	=> false,
+			'msg'		=> "Sucursal Inválida",
+			'errmsg'	=> "id sucursal 0"
+		);
+	}
+
+	echo json_encode($response);
+?>

@@ -1,0 +1,141 @@
+.select-sim {
+    width: 450px;
+    /*height: 46px;
+    line-height: 22px;*/
+    vertical-align: middle;
+    position: relative;
+    background: #edeff1;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    padding: 5px 0px;
+}
+
+.select-sim, .select-sim .options .option label {
+    cursor: not-allowed;
+}
+
+.select-sim.active, .select-sim.active .options .option label {
+    cursor: pointer;
+}
+
+.select-sim::after {
+    content: "▼";
+    font-size: 0.5em;
+    font-family: arial;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+}
+
+.select-sim.hoverSS::after {
+    content: "";
+}
+
+.select-sim.hoverSS {
+    overflow: visible;
+    z-index: 2;
+}
+
+.select-sim.hoverSS .options .option label {
+    display: inline-block;
+}
+
+.select-sim.hoverSS .options {
+    background: #edeff1;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    max-height: 250px;
+    overflow-y: scroll;
+    z-index: 3;
+}
+
+.select-sim .options .option {
+    overflow: hidden;
+}
+
+.select-sim.hoverSS .options .option {
+    overflow: hidden;
+    /*border-top: 0.5px solid #eaeaea;
+    margin: 0 auto;
+    padding-left: 3px;*/
+}
+
+.select-sim.hoverSS .options .option:hover {
+    background: #00ACE9;
+}
+
+.select-sim .options .option img {
+    vertical-align: middle;
+}
+
+.select-sim .options .option label {
+    display: none;
+}
+
+.select-sim .options .option input {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: inline-block;
+    /* fix specific for Firefox */
+    position: absolute;
+    left: -10000px;
+}
+
+.select-sim .options .option input:checked+label {
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 3px;
+    margin-bottom: 0px;
+}
+
+.select-sim .options .option input+label {
+    padding-left: 3px;
+}
+
+.select-sim.hoverSS .options .option input+label {
+    display: block;
+    padding: 5px 2px;
+    margin-bottom: 0px;
+}
+
+.select-sim.hoverSS .options .option input:checked+label {
+    background: #fffff0;
+}
+
+.option label>span {
+    display: inline-block;
+    font-weight: bold;
+    border: 0.5px solid #fdfdfd;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fdfdfd;
+    width: calc(33.33% - 12px);
+    vertical-align: middle;
+    text-align: center;
+    min-height: 54px;
+    margin: 0 2.5px;
+}
+
+.option label span span {
+    display: block;
+    text-align: center;
+    font-weight: 100;
+}
+
+.closedSS.waiting {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

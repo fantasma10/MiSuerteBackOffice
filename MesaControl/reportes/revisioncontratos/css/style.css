@@ -1,0 +1,34 @@
+.btn-spinner .fa-spinner {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.show {
+    display: inline !important;
+}
+
+#container-contracts {
+    font-size: 14px;
+}
+
+#btn-search {
+    margin-top: 22px;
+}
+
+#tbl-contracts-review thead tr th, #tbl-contracts-review tbody tr td {
+    padding: 5px 10px;
+}
+
+.dataTables_buttons {
+    text-align: center;
+    padding: 15px;
+}

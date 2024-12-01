@@ -1,0 +1,329 @@
+@charset "UTF-8";
+* {
+	margin:0;
+	padding:0;
+}
+html, body {
+	height:100%;
+	min-width:1024px;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	color:#373737;
+	font-size:12px;
+}
+/*
+Created by I.S.C. Daniel Gutierrez
+*/
+
+/* =Imports
+============================================================================== */
+/*
+============================================================================== */
+	.re-head
+	{
+		color:#fff;
+		min-width:800px;
+		height:30px; 
+		font-weight:bold;
+		/*
+		 filter: progid:dximagetransform.microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#DDDDDD', GradientType=0); background-repeat: repeat-x; background-color:#CCCCCC; border-bottom-width:2px; border-bottom-color:#DDDDDD;
+	background: -moz-linear-gradient(top, #CCCCCC 0%, #000033 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #CCCCCC), color-stop(100%, #DDDDDD));
+  background: -webkit-linear-gradient(top, #CCCCCC 0%, #DDDDDD 100%);
+  background: -o-linear-gradient(top, #CCCCCC 0%, #DDDDDD 100%);
+  background: -ms-linear-gradient(top, #CCCCCC 0%, #DDDDDD 100%);
+  background: linear-gradient(to bottom, #CCCCCC 0%, #DDDDDD 100%);
+		*/
+		background-image:url(../img/top.png);
+		background-repeat:repeat;
+
+		border-bottom:solid #EEE 2px;
+		text-align:center;
+		font-size:14px;
+	}	
+	
+	.re-top
+	{
+		width:800px;
+		margin: 0px auto 0px auto;
+		padding: 5px 0px 0px 0px;
+		height:30px;
+	}
+
+	.re-contenido
+	{
+		/*width:99%;*/
+		min-width:600px;
+		min-height:400px;
+		padding-top:10%;
+	}
+	.Re-Contenido-Total
+	{
+		text-align:center;
+		margin: 0px auto 0px auto;
+		padding: 0px 0px 0px 0px;
+		width:800px;
+		height:500px;
+		background-image:url(../img/LOGO.png);
+		background-repeat:no-repeat;
+		background-position:right;
+
+		/*background-image:url(../img/fondo.trans2.png);
+		background-color:transparent;
+		background-color:#666666;
+		border-bottom:solid #FFFFFF 1px;
+		border-right:solid #999999 1px;*/
+	}	
+	
+	.re-login
+	{
+		float:left;
+		height:74px;
+		width:200px;
+		margin: 100px auto 0px auto;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.re-ctrls-div
+	{
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+		font-family:"Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+		font-style:normal;
+		font-variant:normal;
+		width:250px;
+		height:37px;
+		text-align:left;
+		font-size:17px;
+		border-top:solid #666666 1px;
+		border-left:solid #666666 1px;
+		border-right:solid #666666 1px;
+		border-bottom:solid #666666 1px;
+		
+		background-color:#FFF;
+		
+		-moz-border-radius-topleft:12px;
+		-moz-border-radius-bottomleft:12px;
+		-webkit-border-top-left-radius:12px;
+		-webkit-border-bottom-left-radius:12px;
+		-moz-border-radius-topright:12px;
+		-moz-border-radius-bottomright:12px;
+		-webkit-border-top-right-radius:12px;
+		-webkit-border-bottom-right-radius:12px;
+		border-radius:12px 12px 12px 12px;
+		
+		-moz-box-shadow:0 0 15px transparent;
+		-webkit-box-shadow:0 0 15px transparent;
+		box-shadow:0 0 15px transparent;
+
+		behavior: url(css/PIE.htc); 
+		
+		color:#999999;
+	}
+	.re-ctrls
+	{
+		left:0px;
+		width:92%;
+		height:33px;
+		margin-top:1px;
+		background-color:transparent;
+		margin-left:10px;
+		border:solid transparent 0px;
+		line-height:25px;
+		color:#777;	
+		font-weight:bold;
+		outline:none;
+	}
+	.re-form
+	{
+		-moz-border-radius-topleft:9px;
+		-moz-border-radius-bottomleft:9px;
+		-webkit-border-top-left-radius:9px;
+		-webkit-border-bottom-left-radius:9px;
+		-moz-border-radius-topright:9px;
+		-moz-border-radius-bottomright:9px;
+		-webkit-border-top-right-radius:9px;
+		-webkit-border-bottom-right-radius:9px;
+		border-radius:9px 9px 9px 9px;
+		behavior: url(css/PIE.htc); 	
+	}
+	#btnAcceso
+	{
+		float:left;
+		width:34px;
+		height:33px;
+		z-index:1901;
+		top:1px;
+		position:relative;
+		background-image:url(../img/btn1.png);
+		background-repeat:no-repeat;
+		cursor:pointer;
+		outline:none;
+		border: none 0px;
+	}
+	#btnAcceso:hover
+	{
+		float:left;
+		height:35px;
+		z-index:1901;
+		top:1px;
+		position:relative;
+		background-image:url(../img/btn3.png);
+		background-repeat:no-repeat;
+		outline:none;
+		
+	}
+	#btnAcceso:focus
+	{
+		float:left;
+		height:35px;
+		z-index:1901;
+		top:1px;
+		position:relative;
+		background-image:url(../img/btn2.png);
+		background-repeat:no-repeat;
+		outline:none;
+	}
+	#btnAcceso:actived
+	{
+		float:left;
+		height:35px;
+		z-index:1901;
+		top:1px;
+		position:relative;
+		background-image:url(../img/btn3.png);
+		background-repeat:no-repeat;
+		outline:none;
+	}
+	
+	
+	#Re-Content {
+		background-color:#EBEEF2;
+		margin: 0px auto 0px auto;
+		padding: 0px 0px 0px 0px;
+		width: 800px;
+		height:700px;
+		}
+		
+		
+	#re-cont-gral
+	{
+		background-image:url(../img/bg.gif);	
+		padding: 10px 0px 0px 0px;
+		margin: 10px 0px 0px 0px;
+		min-width:800px;
+		height:350px;
+		border-bottom: 2px solid #939393;
+		text-align:center;
+	}
+		
+	.Pie-login
+	{
+		width:99%;
+		min-width:800px;
+		text-align:center;
+		color:#333333;
+		font-size:12px;
+		border: 0px none transparent;
+		margin: 0px 0px 0px 0px;
+		padding:0px 0px 0px 0px;
+		height:50px;
+		/*filter: progid:DXImageTransform.Microsoft.Shadow(Color='#CCCCCC',Direction=135, Strength=3);*/
+		bottom:0px;
+		position:relative;
+	}
+	
+	.Error
+	{
+		color:#FF0000;
+		font-size:12px;
+		font-weight:bold;
+	}
+	
+/*==================================================================================*/
+.frontpage {
+	width:100%;
+	height:233px;
+	position:relative;
+	margin:auto 0;
+	top:32%;
+	background:#003366 url(../img/dropshadow.png) repeat-x;
+}
+.footer {
+	width:100%;
+	font-size:9px;
+	color:#999;
+	letter-spacing:1px;
+	text-align:center;
+	clear:both;
+	bottom:6px;
+	position:absolute;
+}	
+.login {
+	width:620px;
+	height:233px;
+	margin:0 auto;
+	position:relative;
+	background:url(../img/backlogin.png) no-repeat;
+}
+.form {
+	width:252px;
+	margin:0 auto;
+	position:relative;
+	top:38px;
+	text-align:center;
+}
+.ctrls {  
+		width:200px;
+		height:25px;
+		margin:0 10px 10px 0;
+		padding-top:2px;
+		text-align:left;
+		cursor:pointer;
+	
+		background-color:#FFF;
+		
+		-moz-border-radius-topleft:8px;
+		-moz-border-radius-bottomleft:8px;
+		-webkit-border-top-left-radius:8px;
+		-webkit-border-bottom-left-radius:8px;
+		-moz-border-radius-topright:8px;
+		-moz-border-radius-bottomright:8px;
+		-webkit-border-top-right-radius:8px;
+		-webkit-border-bottom-right-radius:8px;
+		border-radius:8px;
+		
+		border:1px solid #CCC;
+		padding:3px;
+		
+		-moz-box-shadow:0 0 15px transparent;
+		-webkit-box-shadow:0 0 15px transparent;
+		box-shadow:0 0 15px transparent;
+
+		behavior:url(../css/PIE.htc); 
+		
+		color:#000;
+}
+.rectrls {
+	color:#999;
+	border:none;
+	font-size:14px;
+	padding:6px;
+	background-color:transparent;	
+	border:solid transparent 0px;
+	outline:none;
+	float:left;
+	width:80%;
+}
+.botonAcceso {
+	margin-top:5px;
+	float:left;
+	width:17px;
+	height:20px;
+	border:none;
+	background:url(../img/arrow2.png) no-repeat;
+	cursor:pointer;
+}
+.botonAcceso:hover {
+		background:url(../img/arrow.png) no-repeat;
+}

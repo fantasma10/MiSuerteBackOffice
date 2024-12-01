@@ -1,0 +1,144 @@
+<?php 
+include("../../inc/config.inc.php");
+include("../../inc/session.inc.php");
+
+$idOpcion = 2;
+$tipoDePagina = "Mixto";
+$esEscritura = false;
+
+if ( !desplegarPagina($idOpcion, $tipoDePagina) ) {
+	header("Location: ../../../error.php");
+    exit();
+}
+
+if ( esLecturayEscrituraOpcion($idOpcion) ) {
+	$esEscritura = true;
+}
+
+$submenuTitulo = "Pre-Alta";
+$subsubmenuTitulo = "Consultar";
+	
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta charset="UTF-8">
+    <title>Consulta Cliente</title>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/tm_docs.css" rel="stylesheet">
+    <link href="../../css/RE-CSS.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script src="../../inc/js/jquery.cookie.js" type="text/javascript"></script>
+    
+    <script src="../../inc/js/jquery.js" type="text/javascript"></script>
+    <script src="../../inc/js/RE.js" type="text/javascript"></script>
+    <script src="../../inc/js/_Clientes.js" type="text/javascript"></script>
+    
+    <script src="../../inc/js/jquery.tablesorter.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" href="../../css/themes/base/jquery.ui.all.css" />
+	<script src="../../css/ui/jquery.ui.core.js"></script>
+    <script src="../../css/ui/jquery.ui.widget.js"></script>
+    <script src="../../css/ui/jquery.ui.position.js"></script>
+    <script src="../../css/ui/jquery.ui.menu.js"></script>
+    <script src="../../css/ui/jquery.ui.autocomplete.js"></script>
+    <link rel="stylesheet" href="../../css/demos.css" />
+    
+    <link href="../../css/css.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript">
+    function goToPage(a)
+    {
+        window.location.href="Consulta.php?id=" + a;
+    }
+    </script>
+
+</head>
+
+<body>
+<?php include("../../inc/menu.php"); ?>
+
+<div class="Re-Content">	
+    <br />
+	<?php include("../../inc/submenu.php"); ?>
+    
+    <br />
+    <br />
+    <div class="cuadro_contenido">
+        <div class="sombra_superior"></div>
+        <div class="area_contenido" style="padding:20px 20px 20px 20px; width:100%; float:left;">
+            
+	    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+            <tr>
+              <td width="10%" align="center" valign="middle">&nbsp;</td>
+              <td width="80%" align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td align="center" valign="middle"><img src="../../img/btn_cadena1.png" width="68" height="68" /><br/>
+                    <span class="texto_botones">Cadena</span></td>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="6">
+                    <tr>
+                      <td width="25%" align="center" valign="middle">&nbsp;</td>
+                      <td align="center" valign="middle"><table border="0" cellspacing="0" cellpadding="6">
+                            <tr>
+                              <td align="center" valign="bottom">Nombre
+                                <label><br />
+                                  <input type="text" name="txtNombreCadena" id="txtNombreCadena" />
+                                  </label>
+                                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','../../img/btn_busqueda2.png',1)"></a></td>
+                              <td align="center" valign="bottom"><a href="#" onclick="BuscaPreCadena()" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','../../img/btn_busqueda2.png',1)"><img src="../../img/btn_busqueda1.png" alt="" name="Image21" width="30" height="30" border="0" class="boton_busqueda" id="Image21" /></a></td>
+                            </tr>
+                                            </table></td>
+                      <td width="25%" align="center" valign="middle">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle"><div class="separador"></div></td>
+                </tr>
+
+              </table></td>
+              <td width="10%" align="center" valign="middle">&nbsp;</td>
+            </tr>
+           
+            <tr>
+              <td align="center" valign="middle">&nbsp;</td>
+              <td align="center" valign="middle">
+		
+		    
+		    
+		    <table border="0" width="100%">
+     <tr align="left">
+          <td align="left" valign="middle" class="subtitulo_contenido">Pendientes Pre-Alta</td>
+    </tr>
+</table>
+<br />
+		<div id="divRES"></div>
+		
+		</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">&nbsp;</td>
+              <td align="center" valign="middle">&nbsp;</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sombra_inferior" style="float:left; margin-top:0px;"></div>
+    </div>
+</div>
+
+<div id='emergente'>
+	<img alt='Cargando...' src='../../img/cargando3.gif' id='imgcargando' />
+</div>
+<script>window.setTimeout("AutoPreCadena()",100);</script>
+<script>window.setTimeout("BuscarPreCadenas()",200);</script>
+</body>
+	<?php $RBD->close(); ?>
+</html>

@@ -1,0 +1,7 @@
+label.text-warning input[type=checkbox].ctrlCambios {
+    accent-color: #FCB322;
+}
+
+.btn-default.text-warning.ctrlCambios {
+    background: #fcb322;
+}

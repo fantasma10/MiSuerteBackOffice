@@ -1,0 +1,63 @@
+
+table.listNG1 {
+    width: 100%;
+}
+
+table.listNG {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.listNG th {
+    font-weight: bold;
+}
+
+table.listNG tbody tr:hover {
+    background-color: #ebebeb;
+}
+
+table.listNG tbody tr:nth-child(2n) {
+    background-color: whitesmoke;
+}
+
+table.listNG tbody tr {
+    transition: background-color 150ms ease-out;
+}
+
+table.listNG tr th,
+table.listNG tr td {
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+table.listNG tr th {
+    color: #ffffff;
+    font-weight: normal;
+    background-color: #35679b;
+    border-bottom: solid 2px #d8d8d8;
+    position: sticky;
+    top: 0;
+}
+table.listNG tr td {
+    border: solid 1px #d8d8d8;
+    border-left: 0;
+    border-right: 0;
+    max-width: 250px;
+}
+
+td.select {
+    text-align: center;
+}
+
+td.select {
+    text-align: center;
+}
+
+table.listNG tr td.select {
+    text-align: center;
+}
+
+div#divNewGroup {
+    margin-bottom: 30px;
+}
